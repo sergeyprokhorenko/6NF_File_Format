@@ -64,3 +64,10 @@ RELATIONSHIP bank_x_account 01K3Y0NR1Q3KTA9A6J9KYPK6YB 2023-01-01T00:00:00Z 2023
   account 01K3Y0G45CP4GMGE94BYQ09DFM
 ```
 
+## 5. The same example in JSON format (JSON-6NF) and JSON Schema
+
+[6NF JSON.json](https://github.com/sergeyprokhorenko/6NF_File_Format/blob/main/6NF%20JSON.json)
+
+[JSON Schema.json](https://github.com/sergeyprokhorenko/6NF_File_Format/blob/main/JSON%20Schema.json)
+
+
