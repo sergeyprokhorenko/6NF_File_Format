@@ -35,14 +35,12 @@
     "table": "bank_address",
     "valid_from": "2023-01-01T00:00:00Z",
     "recorded_at": "2023-01-01T12:00:00Z",
-    "columns": [
-      {
-        "country_code": "01K3Y07Z94DGJWVMB0JG4YSDBV",
-        "street": "123 Main St",
-        "city": "New York",
-        "zip": "10001"
-      }
-    ]
+    "columns": {
+      "country_code": "01K3Y07Z94DGJWVMB0JG4YSDBV",
+      "street": "123 Main St",
+      "city": "New York",
+      "zip": "10001"
+    }
   },
   {
     "element_type": "ENTITY",
@@ -73,11 +71,9 @@
     "relationship_id": "01K3Y0NR1Q3KTA9A6J9KYPK6YB",
     "valid_from": "2023-01-01T00:00:00Z",
     "recorded_at": "2023-01-01T12:00:00Z",
-    "columns": [
-      {
-        "bank": "01K3Y0690AJCRFEJ2J49X6ZECY",
-        "account": "01K3Y0G45CP4GMGE94BYQ09DFM"
-      }
-    ]
+    "columns": {
+      "bank": "01K3Y0690AJCRFEJ2J49X6ZECY",
+      "account": "01K3Y0G45CP4GMGE94BYQ09DFM"
+    }
   }
 ]
