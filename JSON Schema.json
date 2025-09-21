@@ -117,16 +117,13 @@
             "format": "date-time"
           },
           "columns": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "additionalProperties": {
-                "oneOf": [
-                  { "type": "string" },
-                  { "type": "number" },
-                  { "type": "boolean" }
-                ]
-              }
+            "type": "object",
+            "additionalProperties": {
+              "oneOf": [
+                { "type": "string" },
+                { "type": "number" },
+                { "type": "boolean" }
+              ]
             }
           }
         },
@@ -154,13 +151,10 @@
             "format": "date-time"
           },
           "columns": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "additionalProperties": {
-                "type": "string",
-                "pattern": "^[0-9A-HJ-KM-NP-TV-Z]{26}$"
-              }
+            "type": "object",
+            "additionalProperties": {
+              "type": "string",
+              "pattern": "^[0-9A-HJ-KM-NP-TV-Z]{26}$"
             }
           }
         },
