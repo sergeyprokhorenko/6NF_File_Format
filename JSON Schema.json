@@ -1,0 +1,175 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "JSON-6NF JSON Schema",
+  "type": "array",
+  "items": {
+    "oneOf": [
+      {
+        "type": "object",
+        "properties": {
+          "element_type": { "const": "ENTITY" },
+          "table": { "type": "string" },
+          "entity_id": { 
+            "type": "string",
+            "pattern": "^[0-9A-HJ-KM-NP-TV-Z]{26}$"
+          }
+        },
+        "required": ["element_type", "table", "entity_id"],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "element_type": { "const": "REFERENCE" },
+          "table": { "type": "string" },
+          "reference_id": {
+            "type": "string",
+            "pattern": "^[0-9A-HJ-KM-NP-TV-Z]{26}$"
+          },
+          "value": {
+            "oneOf": [
+              { "type": "string" },
+              { "type": "number" },
+              { "type": "boolean" }
+            ]
+          }
+        },
+        "required": ["element_type", "table", "reference_id", "value"],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "element_type": { "const": "ATTRIBUTE_OF" },
+          "entity_name": { "type": "string" },
+          "entity_id": {
+            "type": "string",
+            "pattern": "^[0-9A-HJ-KM-NP-TV-Z]{26}$"
+          },
+          "table": { "type": "string" },
+          "value": {
+            "oneOf": [
+              { "type": "string" },
+              { "type": "number" },
+              { "type": "boolean" }
+            ]
+          },
+          "valid_from": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "recorded_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "element_type", "entity_name", "entity_id", "table", "value",
+          "valid_from", "recorded_at"
+        ],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "element_type": { "const": "ATTRIBUTE_REF_OF" },
+          "entity_name": { "type": "string" },
+          "entity_id": {
+            "type": "string",
+            "pattern": "^[0-9A-HJ-KM-NP-TV-Z]{26}$"
+          },
+          "table": { "type": "string" },
+          "reference_id": {
+            "type": "string",
+            "pattern": "^[0-9A-HJ-KM-NP-TV-Z]{26}$"
+          },
+          "valid_from": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "recorded_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "element_type", "entity_name", "entity_id", "table", "reference_id",
+          "valid_from", "recorded_at"
+        ],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "element_type": { "const": "STRUCT_OF" },
+          "entity_name": { "type": "string" },
+          "entity_id": {
+            "type": "string",
+            "pattern": "^[0-9A-HJ-KM-NP-TV-Z]{26}$"
+          },
+          "table": { "type": "string" },
+          "valid_from": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "recorded_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "columns": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": {
+                "oneOf": [
+                  { "type": "string" },
+                  { "type": "number" },
+                  { "type": "boolean" }
+                ]
+              }
+            }
+          }
+        },
+        "required": [
+          "element_type", "entity_name", "entity_id", "table",
+          "valid_from", "recorded_at", "columns"
+        ],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "element_type": { "const": "RELATIONSHIP" },
+          "table": { "type": "string" },
+          "relationship_id": {
+            "type": "string",
+            "pattern": "^[0-9A-HJ-KM-NP-TV-Z]{26}$"
+          },
+          "valid_from": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "recorded_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "columns": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string",
+                "pattern": "^[0-9A-HJ-KM-NP-TV-Z]{26}$"
+              }
+            }
+          }
+        },
+        "required": [
+          "element_type", "table", "relationship_id",
+          "valid_from", "recorded_at", "columns"
+        ],
+        "additionalProperties": false
+      }
+    ]
+  }
+}
