@@ -70,4 +70,14 @@ RELATIONSHIP bank_x_account 01K3Y0NR1Q3KTA9A6J9KYPK6YB 2023-01-01T00:00:00Z 2023
 
 [JSON Schema.json](https://github.com/sergeyprokhorenko/6NF_File_Format/blob/main/JSON%20Schema.json)
 
+## 6. Using the TOON format for data entry in LLM
 
+TOON is a new format suitable for the 6NF File Format.
+
+[Is JSON Dead? Meet TOON – The Token-Efficient Alternative for LLM Prompts](https://www.c-sharpcorner.com/article/is-json-dead-meet-toon-the-token-efficient-alternative-for-llm-prompts/)
+
+[JSON vs TOON — A new era of structured input?](https://www.marius-schroeder.de/json-vs-toon-a-new-era-of-structured-input/)
+
+[JSON to TOON Converter](https://jsontotable.org/json-to-toon/)
+
+[Token-Oriented Object Notation (TOON)](https://github.com/toon-format/toon)
