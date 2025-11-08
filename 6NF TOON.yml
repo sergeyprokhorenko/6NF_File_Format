@@ -1,0 +1,25 @@
+ENTITY[1]{table	entity_id}:
+  bank	01K3Y0690AJCRFEJ2J49X6ZECY
+REFERENCE[1]{table	reference_id	value}:
+  country_code	01K3Y07Z94DGJWVMB0JG4YSDBV	US
+ATTRIBUTE_OF[1]{entity_name	entity_id	table	value	valid_from	recorded_at}:
+  bank	01K3Y0690AJCRFEJ2J49X6ZECY	bank_name	Bank Alpha	2023-01-01T00:00:00Z	2023-01-01T12:00:00Z
+ATTRIBUTE_REF_OF[1]{entity_name	entity_id	table	reference_id	valid_from	recorded_at}:
+  bank	01K3Y0690AJCRFEJ2J49X6ZECY	country_code	01K3Y07Z94DGJWVMB0JG4YSDBV	2023-01-01T00:00:00Z	2023-01-01T12:00:00Z
+STRUCT_OF[1]{entity_name	entity_id	table	valid_from	recorded_at}:
+  bank	01K3Y0690AJCRFEJ2J49X6ZECY	bank_address	2023-01-01T00:00:00Z	2023-01-01T12:00:00Z
+  columns[4]{key	value}:
+    country_code	01K3Y07Z94DGJWVMB0JG4YSDBV
+    street	123 Main St
+    city	New York
+    zip	10001
+ENTITY[1]{table	entity_id}:
+  account	01K3Y0G45CP4GMGE94BYQ09DFM
+ATTRIBUTE_OF[2]{entity_name	entity_id	table	value	valid_from	recorded_at}:
+  account	01K3Y0G45CP4GMGE94BYQ09DFM	account_balance	100000.5	2023-01-01T00:00:00Z	2023-01-01T12:00:00Z
+  account	01K3Y0G45CP4GMGE94BYQ09DFM	account_expiration	2025-12-31T23:59:59Z	2023-01-01T00:00:00Z	2023-01-01T12:00:00Z
+RELATIONSHIP[1]{table	relationship_id	valid_from	recorded_at}:
+  bank_x_account	01K3Y0NR1Q3KTA9A6J9KYPK6YB	2023-01-01T00:00:00Z	2023-01-01T12:00:00Z
+  columns[2]{key	value}:
+    bank	01K3Y0690AJCRFEJ2J49X6ZECY
+    account	01K3Y0G45CP4GMGE94BYQ09DFM
