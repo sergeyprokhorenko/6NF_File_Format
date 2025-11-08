@@ -80,4 +80,4 @@ TOON is a new format for data entry in LLM suitable for the 6NF File Format.
 
 [JSON to TOON Converter](https://jsontotable.org/json-to-toon/)
 
-[Token-Oriented Object Notation (TOON)](https://github.com/toon-format/toon)
+[Token-Oriented Object Notation (TOON)](https://github.com/toon-format/toon) (GitHub)
