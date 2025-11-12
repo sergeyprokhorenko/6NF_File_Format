@@ -11,7 +11,7 @@
 - **Bitemporal Database Compatibility**: All data includes valid_from and recorded_at timestamps
 - **UTC Time Standard**: All timestamps must be in UTC format, denoted by the 'Z' suffix (e.g., 2023-01-01T12:00:00Z)
 - **Struct Grouping**: Multiple attributes with shared temporal context
-- **Compactness**: Uses [Crockford’s Base32](https://www.crockford.com/base32.html) - encoded [UUIDv7](https://datatracker.ietf.org/doc/html/rfc9562#name-uuid-version-7) for identifiers
+- **Compactness**: Uses [Crockford’s Base32](https://www.crockford.com/base32.html) - encoded [UUIDv7](https://datatracker.ietf.org/doc/html/rfc9562#name-uuid-version-7) for identifiers. [Base64UUID](https://github.com/sergeyprokhorenko/Base64UUID) encoding can be used instead
 - **Readability**: Clean syntax with minimal punctuation
 - **PostgreSQL Style**: Uses snake_case notation of identifiers (names)
 - **Case Sensitivity**: Keywords are UPPERCASE and case-sensitive. Identifiers (names) are lowercase and case-sensitive
